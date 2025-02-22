@@ -1,13 +1,26 @@
 .App {
   text-align: center;
-  padding: 20px;
   font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  background-image: url("https://pngimg.com/uploads/beaver/beaver_PNG49.png");
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center bottom;
   min-height: 100vh;
+  padding-top: 10%;
+}
+.Header {
+  text-align: left;
+  padding: 10px 20px;
+  background-color:#8e241c; /* Canadian red */
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+
 }
 
 h1 {
-  color: #d52b1e; /* Canadian red */
+  color: rgb(215, 215, 215);
   font-size: 2.5rem;
   margin-bottom: 20px;
 }

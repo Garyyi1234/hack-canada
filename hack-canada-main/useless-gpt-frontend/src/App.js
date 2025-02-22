@@ -19,7 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Useless GPT: Canadian Edition</h1>
+      <div className="Header">
+        <h1>Useless GPT</h1>
+        </div>
       <p>Ask me anything, and I'll give you a completely useless answer related to Canada!</p>
       <form onSubmit={handleSubmit}>
         <input
