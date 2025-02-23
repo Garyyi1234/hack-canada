@@ -16,8 +16,8 @@
 .Header {
   text-align: left;
   padding: 10px 20px;
-  background-color:#8e241c; /* Canadian red */
-  position: absolute; 
+  background-color:#ffffff; /* Canadian red */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100%;
@@ -55,9 +55,26 @@
 }
 
 h1 {
-  color: rgb(215, 215, 215);
   font-size: 2.5rem;
   margin-bottom: 20px;
+  color: red; /* Fallback color */
+  background: linear-gradient(90deg, white, red, white); /* Larger gradient */
+  background-size: 200% 100%; /* Double the width for smooth animation */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block; /* Ensures the h1 only takes up the space of its text */
+  animation: gradientFlow 4s linear infinite; /* Smooth animation */
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 100% 0; /* Start from the right */
+  }
+  100% {
+    background-position: -100% 0; /* Move to the left */
+  }
 }
 
 p {
