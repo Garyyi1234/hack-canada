@@ -15,8 +15,9 @@
 .answer {
   margin-top: 20px;
   padding: 20px;
-  background-color: white;
-  border: 2px solid #d52b1e; /* Canadian red */
+  background-color: rgb(192, 239, 184);
+  border: 2px solid #267c0c;
+  opacity: 75%;
   border-radius: 10px;
   max-width: 600px;
   max-height: 300px; /* Set a fixed height for the scrollable container */
@@ -44,12 +45,13 @@
 }
 
 .Header {
-  text-align: left;
+  text-align: center;
   padding: 10px 20px;
-  position: fixed; 
+  position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 50%; /* Move to the horizontal center */
+  transform: translateX(-50%); /* Adjust for exact centering */
+  width: auto; /* Allow the header to take up only as much space as needed */
 
 }
 
@@ -69,6 +71,7 @@
   width: 300px;
   height:auto;
   transform: scaleX(-1);
+  opacity: 90%;
 }
 
 .bubble-text {
@@ -98,8 +101,8 @@
 h1 {
   font-size: 2.5rem;
   margin-bottom: 20px;
-  color: red; /* Fallback color */
-  background: linear-gradient(90deg, white, red, white); /* Larger gradient */
+  color: rgb(72,255,0); /* Fallback color */
+  background: linear-gradient(90deg, rgb(192, 239, 184), rgb(72, 255, 0), rgb(192, 239, 184)); /* Larger gradient */
   background-size: 200% 100%; /* Double the width for smooth animation */
   -webkit-background-clip: text;
   background-clip: text;
@@ -127,6 +130,7 @@ form {
   margin: 20px 0;
   display: flex;
   justify-content: center;
+  opacity: 80%;
 
 }
 
@@ -135,7 +139,7 @@ input {
   padding: 10px;
   width: 300px;
   margin-left: 25%;
-  border: 2px solid #d52b1e; /* Canadian red */
+  border: 2px solid #267c0c;
   border-radius: 5px;
   top:80%;
   font-size: 1rem;
@@ -144,8 +148,8 @@ input {
 button {
   position: absolute;
   padding: 10px 20px;
-  background-color: #d52b1e; /* Canadian red */
-  color: white;
+  background-color: #267c0c;
+  color: rgb(245, 255, 245);
   border: none;
   margin-left: 52%;
   top: 80.2%;
@@ -155,17 +159,17 @@ button {
 }
 
 button:hover {
-  background-color: #a81c12; /* Darker red */
+  background-color: #195008; /* Darker green */
 }
 
 .answer {
   margin-top: 20px;
   margin-right: 600px;
   padding: 20px;
-  background-color: white;
-  border: 2px solid #d52b1e; /* Canadian red */
+  background-color: rgb(245, 255, 245);
+  border: 2px solid #267c0c;
   border-radius: 10px;
-  max-width: 600
+  max-width: 600px;
 }
 
 .canadian{
@@ -173,5 +177,5 @@ button:hover {
   margin-left: 80%;
   text-align:right;
   bottom: 5%;
-  color: white;
+  color: rgb(245, 255, 245);
   }

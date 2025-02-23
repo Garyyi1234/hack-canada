@@ -7,33 +7,33 @@ function App() {
   const [answer, setAnswer] = useState('');
   const [animatedAnswer, setAnimatedAnswer] = useState('');
   const [isTyping, setIsTyping] = useState(false);
-  const answerRef = useRef(null); // Ref for the scrollable container
+  const answerRef = useRef(null); 
 
-  // Function to animate the answer
+
   useEffect(() => {
     if (answer && !isTyping) {
       setIsTyping(true);
       let index = 0;
       const interval = setInterval(() => {
         if (index < answer.length) {
-          setAnimatedAnswer((prev) => prev + answer[index-1]);
+          setAnimatedAnswer((prev) => prev + answer[index-1]); 
           index++;
         } else {
           clearInterval(interval);
           setIsTyping(false);
         }
-      }, 50); // Adjust the speed of the animation here
+      }, 50);
     }
-  }, [answer]);
+  }, [answer]); 
 
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setAnimatedAnswer(''); // Clear the animated answer
-    setAnswer(''); // Clear the answer
+    setAnimatedAnswer(''); 
+    setAnswer(''); 
     try {
       const response = await axios.post('http://localhost:5000/ask', { question });
-      setAnswer(response.data.answer); // Set the answer to trigger the animation
+      setAnswer(response.data.answer); 
     } catch (error) {
       console.error('Error:', error.response ? error.response.data : error.message);
       setAnswer('Oops! Something went wrong. Try again please.');
